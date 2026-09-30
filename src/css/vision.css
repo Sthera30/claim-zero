@@ -1,0 +1,87 @@
+.vision-section {
+    background: #F5F5F5;
+    padding: 5rem 5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.vision-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 3.5rem;
+}
+
+.vision-left {
+    flex: 1 1 280px;
+}
+
+.vision-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.vision-left h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+}
+
+.vision-left p {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.vision-right {
+    flex: 1 1 280px;
+    border-left: 1px solid #333;
+    padding-left: 3rem;
+}
+
+.tagline-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.vision-right blockquote {
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.5;
+    padding-left: 1.2rem;
+    border-left: 2px solid green;
+    border-radius: 0;
+    margin: 0;
+}
+
+
+@media (max-width: 768px) {
+    .vision-section {
+        padding: 3.5rem 5%;
+    }
+
+    .vision-right {
+        border-left: none;
+        border-top: 1px solid #333;
+        padding-left: 0;
+        padding-top: 2rem;
+    }
+
+    .vision-right blockquote {
+        font-size: 1.2rem;
+    }
+
+    .vision-left h2 {
+        font-size: 1.6rem;
+    }
+
+    .pillar-box {
+        flex: 1 1 100%;
+    }
+}

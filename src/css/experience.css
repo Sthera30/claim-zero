@@ -1,0 +1,29 @@
+.experience-container{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 40vh;
+    padding: 0rem 2%;
+    background: hsl(350, 77%, 75%);
+    margin-top: 5rem;
+}
+
+.experience-box{
+   flex: 1 1 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.experience-box span{
+    font-weight: 300;
+    font-size: 2.4rem;
+}
+
+.experience-box p{
+    font-size: 1.2rem;
+}

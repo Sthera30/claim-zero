@@ -1,0 +1,533 @@
+.product-section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    padding: 0rem 2%;
+}
+
+.product-section-container h2 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 4rem;
+    position: relative;
+    margin-bottom: 1rem;
+    /* IMPORTANT */
+}
+
+
+.product-section-container h2 span {
+    color: hsl(350, 73%, 50%);
+}
+
+.product-section-container h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -12px;
+    width: 0;
+    height: 3px;
+    background: hsl(350, 73%, 50%);
+    border-radius: 2px;
+    animation: lineGrow 1s ease forwards;
+}
+
+@keyframes lineGrow {
+    to {
+        width: 60px;
+    }
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 2%;
+}
+
+.product-container .product-container-box {
+    flex: 1 1 20rem;
+    cursor: pointer;
+    margin: 1rem 0rem;
+    position: relative;
+}
+
+.product-container .product-container-box .stock-in {
+    position: absolute;
+    top: 1.2rem;
+    right: .9rem;
+    color: hsl(120, 21%, 33%);
+    background: hsl(120, 27%, 83%);
+    padding: .8rem 1.2rem;
+    border-radius: 3rem;
+}
+
+.product-container .product-container-box .stock-out {
+    position: absolute;
+    top: 1.2rem;
+    right: .9rem;
+    color: hsl(0, 41%, 29%);
+    background: hsl(0, 61%, 84%);
+    padding: .8rem 1.2rem;
+    border-radius: 3rem;
+}
+
+.product-container .product-container-box img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+}
+
+.product-container .product-container-box .content {
+    padding: 1rem;
+}
+
+.product-container .product-container-box:hover {
+    box-shadow: 0rem .5rem 1rem rgba(0, 0, 0, .2);
+}
+
+.product-container .product-container-box .content p:nth-child(1) {
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.2;
+}
+
+.product-container .product-container-box .content p:nth-child(2) {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 300;
+    font-size: .6rem;
+}
+
+.view-all-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem 0rem;
+}
+
+
+.view-all-container button {
+    background: hsl(37, 89%, 62%);
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.view-all-container button:hover {
+    background: hsl(37, 86%, 72%);
+}
+
+.content button {
+    width: 100%;
+    color: #333;
+    background: #f8e0ba;
+    padding: .8rem 1rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.content button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: hsl(37, 90%, 64%);
+    transition: width 0.5s ease;
+    z-index: -1;
+}
+
+.content button:hover::before {
+    width: 100%;
+}
+
+.admin-functionality_ {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.admin-functionality_ a:nth-child(1) {
+    color: blue;
+}
+
+.admin-functionality_ a:nth-child(2) {
+    color: red;
+}
+
+.btnAddCartOutStock:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: #cccccc;
+    color: #666666;
+}
+
+.product-section-container p {
+    max-width: 50rem;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+.services-list {
+    width: 100%;
+    max-width: 60rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem auto;
+
+}
+
+/* each line */
+.service-item {
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    padding: 1rem 1.5rem;
+    border-left: 3px solid #F7E7CE;
+    background: rgba(255, 255, 255, 0.02);
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    word-break: break-word;
+
+
+}
+
+/* 🔥 hover effect */
+.service-item:hover {
+    transform: translateX(10px) scale(1.02);
+    background: rgba(247, 231, 206, 0.08);
+    border-left: 6px solid #F7E7CE;
+}
+
+/* ✨ glowing line animation */
+.service-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(247, 231, 206, 0.15);
+    transition: width 0.4s ease;
+    z-index: -1;
+}
+
+.service-item:hover::before {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .services-list {
+        padding: 0 1rem;
+    }
+
+    .service-item {
+        font-size: 1rem;
+        padding: 0.8rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-item {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+}
+
+
+.gallery-container_ {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+    align-items: stretch;
+    justify-content: center;
+    padding: 0rem 2%;
+}
+
+.gallery-box {
+    flex: 1 1 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.gallery-box img {
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+}
+
+
+.gallery-box h2 {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    text-align: center;
+    max-width: 10rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    height: 5rem;
+}
+
+.gallery-box p {
+    font-size: 0.95rem;
+    text-align: center;
+    padding: 0 1.2rem 1.5rem;
+    line-height: 1.6;
+}
+
+.our-services-container {
+    padding: 0rem 7%;
+    margin-top: 4rem;
+}
+
+
+.our-services-inner-container p {
+    font-size: 1.1rem;
+    margin-bottom: 2.8rem;
+    border-bottom: .1rem solid hsl(0, 5%, 84%);
+    padding-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.our-services-inner-container p span {
+    font-weight: 800;
+}
+
+.serv-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0rem 2%;
+    margin-top: 2rem;
+}
+
+.serve-box {
+    flex: 1 1 20rem;
+    overflow: hidden;
+    margin-top: 5rem;
+}
+
+
+.serve-box h2 {
+    text-align: center;
+    margin-bottom: .2rem;
+}
+
+.serve-box p {
+    text-align: center;
+    line-height: 1.5;
+}
+
+.serve-box img {
+    width: 100%;
+    height: 32rem;
+    object-fit: cover;
+    border-radius: .5rem;
+    transition: transform 0.5s ease;
+
+}
+
+.serve-box button {
+    padding: 1.2rem 2rem;
+    border-radius: .5rem;
+    background: hsl(350, 68%, 57%);
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0rem .5rem 1rem rgba(0, 0, 0, .4);
+    transition: all 0.3s ease;
+    margin-top: 1.2rem;
+}
+
+.serve-box button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.serv-co {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+    .burner-salon {
+        background:
+            url('../../public/pic8.png') center / cover no-repeat,
+            hsl(350, 61%, 85%);
+        /* 👈 Change this color */
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        padding: 0rem 2%;
+        height: 36rem;
+        margin-top: 10rem;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+.burner-inner h2 {
+    font-size: 2rem;
+}
+
+.burner-inner p {
+    max-width: 35rem;
+    line-height: 1.4;
+    color: hsl(0, 0%, 38%);
+}
+
+.burner-inner button {
+    background: hsl(350, 75%, 50%);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+.burner-inner button:hover {
+    background: hsl(350, 57%, 48%);
+}
+
+.choose-us-container {
+    display: flex;
+    padding: 0rem 2%;
+    margin-top: 4rem;
+}
+
+.choose-us-inner {
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 2%;
+}
+
+.choo {
+    color: hsl(350, 74%, 54%);
+}
+
+.choose-us-inner h3 {
+    margin-top: 0rem;
+}
+
+.choose-us-inner p {
+    max-width: 40rem;
+    line-height: 1.5;
+    margin-top: .5rem;
+}
+
+.choose-us-inner button {
+    width: 30%;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    background: hsl(350, 81%, 57%);
+    color: #fff;
+}
+
+.choose-us-inner button:hover {
+    background: hsl(350, 65%, 41%);
+}
+
+
+.head_ {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8rem;
+    font-size: 2.2rem;
+    position: relative;
+}
+
+.head_::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -20px;
+    width: 0;
+    height: 3px;
+    background: hsl(350, 73%, 50%);
+    border-radius: 2px;
+    animation: lineGrow 1s ease forwards;
+}
+
+.testimonials-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0rem 2%;
+}
+
+.testimonials-box{
+    flex: 1 1 20rem;
+    margin-top: 0rem;
+    border: .2rem solid hsl(349, 44%, 90%);
+    padding: 1.5rem;
+    border-radius: .5rem;
+    height: 16rem;
+}
+
+.testimonials-box p{
+    line-height: 1.4rem;
+    color: hsl(0, 0%, 48%);
+}
+
+.star{
+    color: hsl(350, 73%, 50%);
+    margin-left: .2rem;
+} 
+
+.name-co h3{
+    color: hsl(0, 0%, 38%);
+}
+
+.name-co span{
+    color: hsl(0, 0%, 38%);
+}
+
+.view-container-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem auto;
+}
+
+.view-container-button button{
+    background: hsl(350, 75%, 50%);
+    color: #fff;
+    padding: 1rem 2.5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+.view-container-button button:hover {
+    background: hsl(350, 65%, 41%);
+}

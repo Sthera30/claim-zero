@@ -1,0 +1,55 @@
+.hero-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0rem 5%;
+    background: hsl(355, 82%, 87%);
+    height: 100vh;
+}
+
+.hero-container .hero-container-left{
+    flex: 1 1 30rem;
+}
+
+.hero-container .hero-container-right{
+    flex: 1 1 30rem;
+}
+
+.hero-container-left h1{
+    font-weight: 800;
+    max-width: 35rem;
+    line-height: 1.4;
+}
+
+.hero-container-left p{
+    max-width: 40rem;
+    color: hsl(0, 0%, 29%);
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.hero-container-right img{
+    width: 100% !important;
+    height: 35rem;
+    object-fit: contain;
+}
+
+.hero-container-left button{
+    color: #fff;
+    border-radius: .5rem;
+    background: hsl(350, 84%, 59%);
+    padding: 1.2rem 1.8rem;
+    cursor: pointer;
+    margin-top: 1.2rem;
+    letter-spacing: 0.1rem;
+}
+
+.hero-container-left button:hover{
+    color: #fff;
+    border-radius: .5rem;
+    background: hsl(350, 47%, 46%);
+    padding: 1rem 1.8rem;
+    cursor: pointer;
+    margin-top: 1.2rem;
+}

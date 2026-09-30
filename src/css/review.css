@@ -1,0 +1,117 @@
+.review-container {
+    background: #fff;
+    padding: 5rem 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.heading-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+}
+
+.review-container h2 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.review-container h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 60px;
+    height: 3px;
+    background: green;
+    border-radius: 2px;
+}
+
+.brand-desc {
+    max-width: 40rem;
+    text-align: center;
+    line-height: 1.7 !important;
+    margin-bottom: 3rem;
+    color: #555;
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+/* slider */
+.slider-wrapper {
+    overflow: hidden;
+    width: 100%;
+    /* fade edges */
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.slider-track {
+    display: flex;
+    gap: 3rem;
+    width: max-content;
+    animation: scrollLeft 20s linear infinite;
+}
+
+.slider-wrapper:hover .slider-track {
+    animation-play-state: paused;
+}
+
+/* card */
+.client-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f9f9f9;
+    box-shadow: 0rem .5rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    padding: 1.2rem 2rem;
+    min-width: 12rem;
+    height: 7rem;
+    flex-shrink: 0;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.client-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+}
+
+.client-card img {
+    width: 8rem;
+    height: 4rem;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.client-card:hover img {
+    filter: grayscale(0%);
+}
+
+@keyframes scrollLeft {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+    .review-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .client-card {
+        min-width: 9rem;
+        padding: 1rem 1.5rem;
+    }
+
+    .client-card img {
+        width: 6rem;
+    }
+}
+

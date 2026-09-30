@@ -1,0 +1,68 @@
+.about-burner-container {
+    background: radial-gradient(ellipse at center, #1a1a1a 0%, #0d0d0d 70%, #080808 100%);
+    width: 100%;
+    min-height: 100vh;
+    padding: 4rem 2rem;
+}
+
+.about-burner-container h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4rem;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 2.5rem;
+    color: #fff;
+    position: relative;
+    padding-bottom: .8rem;
+}
+
+.about-burner-container h2::after{
+     content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 2px;
+    background: #F7E7CE;
+}
+
+.about-burner {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 3%;
+}
+
+.about-burner .about-box {
+    flex: 1 1 20rem;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 3rem;
+    margin-top: 5rem;
+     background: #1f1f1f;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.05)
+}
+
+.about-box:hover {
+    transform: translateY(-2rem);
+    box-shadow: 0rem .5rem 1rem rgba(0, 0, 0, .2);
+}
+
+.about-box p {
+    line-height: 1.3;
+}
+
+.about-box h2 {
+    font-size: 2.5rem;
+}
+
+.about-box h3 {
+    font-size: 1.6rem;
+}

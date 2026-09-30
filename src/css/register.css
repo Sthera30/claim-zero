@@ -1,0 +1,65 @@
+.register-container .register-inner-container form {
+    display: flex;
+    flex-direction: column;
+    margin: 15rem auto;
+    box-shadow: 0rem .5rem 1rem rgba(0, 0, 0, 0.2);
+    width: 45%;
+    padding: 2rem 2%;
+}
+
+.register-container .register-inner-container form h1 {
+    display: flex;
+    text-align: center !important;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.register-container .register-inner-container form input {
+    margin: 1rem 0rem;
+    border: .1rem solid hsl(0, 4%, 86%);
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.register-container .register-inner-container form button {
+    margin-top: 1.5rem;
+    width: 100%;
+    color: #333;
+    background: #f8e0ba;
+    padding: 1.2rem 0rem !important;
+    border-radius: 3rem;
+    cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.register-container .register-inner-container form button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: hsl(37, 90%, 64%);
+    transition: width 0.5s ease;
+    z-index: -1;
+}
+
+.register-container .register-inner-container form button:hover::before {
+    width: 100%;
+}
+
+.reg{
+    display: flex;
+    gap: .8rem;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,121 @@
+.footer-container {
+    background: hsl(350, 69%, 12%);
+    height: 26rem;
+}
+
+.footer-con {
+    display: flex !important;
+    flex-wrap: wrap;
+    padding: 2rem 5%;
+}
+
+.footer-box {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 20rem;
+}
+
+.footer-box a span{
+    margin-left: .5rem;
+}
+
+.footer-box h3 {
+    color: hsl(350, 92%, 46%);
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    font-size: .8rem;
+}
+
+.footer-box a {
+    padding: .8rem 0rem;
+    color: #fff;
+    font-size: .9rem;
+}
+
+
+.footer-container p {
+    text-align: center;
+    color: #fff;
+    border-top: .1rem solid hsl(0, 0%, 80%);
+    padding-top: 2rem;
+}
+
+.footer-container p a {
+    color: #fff;
+}
+
+.footer-container p a:hover {
+    color: hsl(37, 72%, 66%);
+}
+
+.footer-inner h2 {
+    color: #ffff;
+    font-weight: 300;
+}
+
+.footer-inner img {
+    width: 35rem;
+    margin-top: 4rem;
+}
+
+.footer-box:nth-child(3) a {
+    display: flex;
+    align-items: center;
+}
+
+
+.foot {
+    padding: 0rem 2%;
+    line-height: 1.3;
+    color: hsl(0, 0%, 66%) !important;
+}
+
+.footer-box:nth-child(3) a {
+    color: #fff;
+}
+
+.logo-orbit-wrapper_ {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    margin-bottom: 2.8rem;
+}
+
+.logo-orbit-wrapper_ img {
+    width: 4rem;
+    height: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.orbit-ring_ {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: spinRing_ 6s linear infinite;
+}
+
+.orbit-dot_ {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: hsl(330, 82%, 42%);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 0;
+    transform: rotate(calc(var(--i) * 45deg)) translateX(38px) translateY(-50%);
+    opacity: 0.85;
+}
+
+@keyframes spinRing_ {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .orbit-ring_ { animation: none; }
+}

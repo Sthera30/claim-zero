@@ -1,0 +1,19 @@
+.scroll-top-btn {
+  position: fixed;
+  bottom: 10px;
+  right: 5px;
+  background: hsl(330, 74%, 49%);
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 1000;
+  transition: 0.3s ease;
+}
+
+.scroll-top-btn:hover {
+  background: hsl(330, 94%, 38%);
+  transform: translateY(-3px);
+}
