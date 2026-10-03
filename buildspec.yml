@@ -4,7 +4,7 @@ phases:
   pre_build:
     commands:
       - ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
-      - REGION=us-east1
+      - REGION=us-east-1
       - REPO=claim-zero
       - IMAGE_URI=$ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/$REPO:latest
       - echo Logging in to Amazon ECR
